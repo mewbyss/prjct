@@ -10,5 +10,14 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
     }
+	
+	stages {
+		stage ('Heresy') {
+			steps {
+				echo "Start"
+				echo "Processing..."
+				echo "The end"
+		}}
+	}
     }
 
