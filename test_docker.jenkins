@@ -1,0 +1,28 @@
+pipeline {
+    agent { docker { image 'python:latest'}}
+	
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        timestamps()
+    }
+	
+	stages {
+		stage ('First Step') {
+			steps {
+				echo "Start"
+				echo "Processing..."
+				echo "The end"
+		}
+
+}
+tage ('Docker Step') {
+			steps {
+				echo "Start"
+				echo "Processing..."
+        sh "python --version"
+				echo "The end"
+		}
+
+}
+	}
+    }
