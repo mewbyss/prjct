@@ -9,7 +9,7 @@ pipeline {
     }
 	
 	stages {
-		stage ('Heresy') {
+		stage ('First Step') {
 			steps {
 				echo "Start"
 				echo "Processing..."
